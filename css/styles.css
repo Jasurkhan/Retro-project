@@ -1,0 +1,426 @@
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Стили для body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+.tab-content:not(.active) {
+    display: none; 
+ }
+
+/* Стили для шапки сайта */
+header {
+    background-color: #5f1212;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.header-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.img-logo {
+    width: 150px;
+    height: 149px;
+    border-radius: 15%;
+}
+
+.img-logo {
+    transition: transform 0.05s ease-in-out;
+  }
+  
+  .img-logo:hover {
+    animation: tilt 0.6s ease-in-out 2; /* Длительность 0.6 секунд, два цикла */
+  }
+  
+  @keyframes tilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); } /* Наклон влево */
+    50% { transform: rotate(10deg); }  /* Наклон вправо */
+    75% { transform: rotate(-10deg); } /* Снова влево */
+    100% { transform: rotate(0deg); }  /* Возврат в исходное положение */
+  }
+
+.item {
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1 .item2 {
+    flex: 1; /* Делает оба элемента одинаковой ширины */
+}
+
+.header-item2 {
+     margin-left: 150px; 
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+/**
+ * PRIMARY TABS
+**/
+
+.primary-tabs {
+    margin-top: 1px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 10px;
+    color: #555;
+    
+}
+
+.tab-btn {
+    margin: 0;
+    padding: 0;
+    border: 1px solid ;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #574448;
+}
+
+.tab-btn:hover { cursor: pointer; }
+
+
+/**
+*CARS INFO
+*/
+
+
+.title {
+    font-size: 26px;
+}
+
+.subtitle-text {
+    font-size: 12px;
+}
+
+.gaz-car-models {
+    border: 20px;
+    margin-top: 15px;
+    margin-left: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+}
+
+.car-photo, img {
+    width: 190px;
+     height: 140px;
+     margin-bottom: 10px;
+}
+
+.car-model {
+    position: relative;
+    display: inline-block;
+}
+.gaz-21-photo,img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.car-photo,img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.car-name {
+    /* display: inline-block; */
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 14px;
+    /* position: relative; */
+    color: #333; 
+    cursor: pointer;
+}
+
+.car-name-long {
+    display: inline-block;
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 16px;
+    position: relative;
+    left: 10px;
+    color: #333; 
+    cursor: pointer;
+}
+
+/* .dropdown-text,p {
+    font-size: 10px;
+
+} */
+  .car-model:hover .dropdown-text {
+    display: block;
+}
+ 
+
+
+  .dropdown-text {
+    width: 400px;
+    display: none;
+    font-size: 0.625rem;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown-text-gaz69 {
+    width: 200px;
+    display: none;
+    position: absolute;
+    font-size: 0.625rem;
+    background-color: #f9f9f9;
+    /* min-width: 160px; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .car-model:hover .dropdown-text-gaz69 {
+    display: block;
+}
+ 
+/* header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+} */
+
+/* Стили для главного баннера */
+.banner {
+    margin-top: 3.75rem;
+    background: url('/images/') no-repeat center center/cover;
+    /* color: #fff; */
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+/* Стили для каталога товаров */
+.catalog {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.catalog h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 16px;
+    color: #666;
+}
+
+.product button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+/* Стили для секции "О нас" */
+.about {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+}
+
+/* 
+__________________________
+#CONTACTS
+Стили для секции "Контакты" 
+__________________________
+*/
+.container {
+    max-width: 800px;
+    margin: 1rem;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-title h2 {
+    color: #d9534f; /* Синий цвет */
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea, input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.half-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: #d9534f; /* Красный цвет */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Дополнительные стили для создания атмосферы */
+.contact {
+    background-image: url('советский_плакат.jpg'); /* Фон с изображением советского плаката */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+
+.contact-a {
+    display: flex;
+    flex-direction: row;
+}
+
+.infor {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.infor h2 {
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+/* 
+_________________
+Стили для футера 
+_________________
+*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
